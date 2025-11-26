@@ -28,3 +28,4 @@
 /home/jmtester/Desktop/AzureDeplys/DoomSkillsWeb/obj/Debug/net8.0/DoomSkillsWeb.pdb
 /home/jmtester/Desktop/AzureDeplys/DoomSkillsWeb/obj/Debug/net8.0/DoomSkillsWeb.genruntimeconfig.cache
 /home/jmtester/Desktop/AzureDeplys/DoomSkillsWeb/obj/Debug/net8.0/ref/DoomSkillsWeb.dll
+/home/jmtester/Desktop/AzureDeplys/DoomSkillsWeb/obj/Debug/net8.0/DoomSkillsWeb.sourcelink.json

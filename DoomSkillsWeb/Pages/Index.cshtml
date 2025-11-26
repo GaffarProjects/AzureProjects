@@ -1,19 +1,134 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Welcome to Doomskills";
+    ViewData["Title"] = "Home";
 }
 
-<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 75vh;">
-    <p style="font-size: 1rem; color: #888; margin-bottom: 0.5rem;">By Gaffar</p>
-    <h1 style="font-size: 3rem; color: #2A3759; margin-bottom: 1rem;">Welcome to <span style="color: #BE3144;">Doomskills</span>!</h1>
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
-        alt="Mountain Adventure" style="width: 60%; max-width: 600px; border-radius: 1rem; margin-bottom: 2rem; box-shadow:0 4px 20px rgba(0,0,0,0.2);" />
-    <p style="font-size: 1.5rem; color: #444;">Unleash your skills... and level up! 🚀</p>
-</div>
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    .hero {
+        text-align: center;
+        color: white;
+        padding: 4rem 1rem;
+    }
+    .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .hero .tagline {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+    }
+    .hero .cta-button {
+        display: inline-block;
+        background: #FFD700;
+        color: #333;
+        padding: 1rem 2.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 50px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .hero .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    .feature-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transition: transform 0.3s;
+    }
+    .feature-card:hover {
+        transform: translateY(-10px);
+    }
+    .feature-card .icon {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+    .feature-card h3 {
+        color: #667eea;
+        margin-bottom: 0.5rem;
+    }
+    .feature-card p {
+        color: #666;
+    }
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+        text-align: center;
+        color: white;
+    }
+    .stat-box h2 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+    .stat-box p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+</style>
 
+<div class="container">
+    <div class="hero">
+        <h1>🚀 Welcome to DoomSkills</h1>
+        <p class="tagline">Elevate Your Career with Expert-Led Training in Cloud, DevOps & Automation</p>
+        <a href="/Courses" class="cta-button">Explore Courses</a>
+    </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="features">
+        <div class="feature-card">
+            <div class="icon">☁️</div>
+            <h3>Cloud Training</h3>
+            <p>Master Azure, AWS, and cloud architecture with hands-on labs and real-world projects.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">⚙️</div>
+            <h3>DevOps Mastery</h3>
+            <p>Learn CI/CD, Infrastructure as Code, and modern deployment strategies.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🤖</div>
+            <h3>Test Automation</h3>
+            <p>Build robust automation frameworks with Selenium, Playwright, and more.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🔧</div>
+            <h3>ServiceNow</h3>
+            <p>ITSM, workflow automation, and enterprise service management expertise.</p>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stat-box">
+            <h2>20+</h2>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-box">
+            <h2>100%</h2>
+            <p>Hands-On Learning</p>
+        </div>
+        <div class="stat-box">
+            <h2>24/7</h2>
+            <p>Support & Mentorship</p>
+        </div>
+    </div>
 </div>

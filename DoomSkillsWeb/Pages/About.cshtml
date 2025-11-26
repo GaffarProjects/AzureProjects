@@ -1,0 +1,91 @@
+@page
+@model AboutModel
+@{
+    ViewData["Title"] = "About";
+}
+
+<style>
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
+    .about-section {
+        background: white;
+        border-radius: 20px;
+        padding: 3rem;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    .about-section h1 {
+        color: #667eea;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .about-section h2 {
+        color: #764ba2;
+        font-size: 1.8rem;
+        margin: 2rem 0 1rem;
+    }
+    .about-section p {
+        color: #555;
+        line-height: 1.8;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    .about-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    .about-section ul li {
+        padding: 0.5rem 0;
+        color: #666;
+    }
+    .about-section ul li:before {
+        content: "✓ ";
+        color: #667eea;
+        font-weight: bold;
+        margin-right: 0.5rem;
+    }
+    .highlight-box {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 2rem;
+        border-radius: 15px;
+        margin-top: 2rem;
+    }
+</style>
+
+<div class="container">
+    <div class="about-section">
+        <h1>About DoomSkills Training Institute</h1>
+        <p>Welcome to DoomSkills, your trusted partner in tech career transformation and skill advancement.</p>
+
+        <h2>Our Mission</h2>
+        <p>We empower IT professionals to master cutting-edge technologies through practical, hands-on training and real-world project experience.</p>
+
+        <h2>Why Choose DoomSkills?</h2>
+        <ul>
+            <li>20+ years of industry experience in Testing, Cloud, and DevOps</li>
+            <li>Hands-on, project-based learning approach</li>
+            <li>Real-world scenarios and enterprise best practices</li>
+            <li>Personalized mentorship and career guidance</li>
+            <li>Flexible schedules for working professionals</li>
+            <li>Certification preparation (Azure AZ-104, AZ-305, and more)</li>
+        </ul>
+
+        <h2>About the Instructor - Gaffar</h2>
+        <p>With over 20 years of experience in IT, specializing in test automation, cloud architecture, and DevOps practices, Gaffar brings real-world expertise to every training session.</p>
+        <ul>
+            <li>Senior Test Automation Specialist at TCS</li>
+            <li>Azure Cloud Architecture certifications</li>
+            <li>Expert in Selenium, Playwright, Cucumber BDD</li>
+            <li>Proficient in Azure, GitHub Actions, CI/CD pipelines</li>
+            <li>ServiceNow implementation experience</li>
+        </ul>
+
+        <div class="highlight-box">
+            <h2 style="color: white; margin-top: 0;">Ready to Transform Your Career?</h2>
+            <p style="color: white;">Join hundreds of professionals who have elevated their skills with DoomSkills.</p>
+        </div>
+    </div>
+</div>

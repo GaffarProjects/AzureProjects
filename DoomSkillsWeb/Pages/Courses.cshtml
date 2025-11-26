@@ -1,0 +1,249 @@
+@page
+@model CoursesModel
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
+    .page-header {
+        text-align: center;
+        color: white;
+        margin-bottom: 3rem;
+    }
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+    .course-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transition: transform 0.3s;
+    }
+    .course-card:hover {
+        transform: translateY(-10px);
+    }
+    .course-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+    }
+    .course-header .icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .course-header h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    .course-body {
+        padding: 2rem;
+    }
+    .course-body h4 {
+        color: #667eea;
+        margin-bottom: 1rem;
+    }
+    .course-body ul {
+        list-style: none;
+        padding: 0;
+    }
+    .course-body ul li {
+        padding: 0.5rem 0;
+        color: #555;
+        border-bottom: 1px solid #eee;
+    }
+    .course-body ul li:before {
+        content: "✓ ";
+        color: #667eea;
+        font-weight: bold;
+        margin-right: 0.5rem;
+    }
+    .course-footer {
+        padding: 1.5rem 2rem;
+        background: #f8f9fa;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .duration {
+        color: #666;
+        font-weight: bold;
+    }
+    .enroll-btn {
+        background: #667eea;
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+    .enroll-btn:hover {
+        background: #764ba2;
+    }
+</style>
+
+<div class="container">
+    <div class="page-header">
+        <h1>🎓 Our Training Courses</h1>
+        <p style="font-size: 1.3rem;">Industry-leading programs designed for career growth</p>
+    </div>
+
+    <div class="courses-grid">
+        <!-- Azure Cloud Course -->
+        <div class="course-card">
+            <div class="course-header">
+                <div class="icon">☁️</div>
+                <h3>Azure Cloud Architecture</h3>
+                <p>Master Cloud Computing</p>
+            </div>
+            <div class="course-body">
+                <h4>What You'll Learn:</h4>
+                <ul>
+                    <li>Azure fundamentals & core services</li>
+                    <li>Virtual networks & security</li>
+                    <li>Azure App Services & Functions</li>
+                    <li>Infrastructure as Code (Bicep, ARM)</li>
+                    <li>Cost optimization strategies</li>
+                    <li>AZ-104 & AZ-305 exam prep</li>
+                </ul>
+            </div>
+            <div class="course-footer">
+                <span class="duration">⏱ 8-10 Weeks</span>
+                <a href="/Contact" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+        <!-- Test Automation Course -->
+        <div class="course-card">
+            <div class="course-header">
+                <div class="icon">🤖</div>
+                <h3>Test Automation Mastery</h3>
+                <p>Build Robust Frameworks</p>
+            </div>
+            <div class="course-body">
+                <h4>What You'll Learn:</h4>
+                <ul>
+                    <li>Selenium WebDriver advanced</li>
+                    <li>Playwright modern automation</li>
+                    <li>Cucumber BDD framework</li>
+                    <li>TestNG & JUnit integration</li>
+                    <li>Page Object Model design</li>
+                    <li>CI/CD integration with Jenkins</li>
+                </ul>
+            </div>
+            <div class="course-footer">
+                <span class="duration">⏱ 6-8 Weeks</span>
+                <a href="/Contact" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+        <!-- DevOps Course -->
+        <div class="course-card">
+            <div class="course-header">
+                <div class="icon">⚙️</div>
+                <h3>DevOps Engineering</h3>
+                <p>Automate Everything</p>
+            </div>
+            <div class="course-body">
+                <h4>What You'll Learn:</h4>
+                <ul>
+                    <li>CI/CD pipeline design</li>
+                    <li>GitHub Actions & Jenkins</li>
+                    <li>Docker containerization</li>
+                    <li>Kubernetes orchestration</li>
+                    <li>Infrastructure as Code</li>
+                    <li>Monitoring & logging</li>
+                </ul>
+            </div>
+            <div class="course-footer">
+                <span class="duration">⏱ 10-12 Weeks</span>
+                <a href="/Contact" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+        <!-- ServiceNow Course -->
+        <div class="course-card">
+            <div class="course-header">
+                <div class="icon">🔧</div>
+                <h3>ServiceNow Administration</h3>
+                <p>IT Service Management</p>
+            </div>
+            <div class="course-body">
+                <h4>What You'll Learn:</h4>
+                <ul>
+                    <li>ServiceNow platform overview</li>
+                    <li>ITSM module configuration</li>
+                    <li>Workflow automation</li>
+                    <li>Integration Hub</li>
+                    <li>Custom applications</li>
+                    <li>Best practices & governance</li>
+                </ul>
+            </div>
+            <div class="course-footer">
+                <span class="duration">⏱ 6-8 Weeks</span>
+                <a href="/Contact" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+        <!-- Java Programming -->
+        <div class="course-card">
+            <div class="course-header">
+                <div class="icon">☕</div>
+                <h3>Java Programming</h3>
+                <p>Core to Advanced</p>
+            </div>
+            <div class="course-body">
+                <h4>What You'll Learn:</h4>
+                <ul>
+                    <li>Java fundamentals & OOP</li>
+                    <li>Collections & Streams</li>
+                    <li>Multithreading & concurrency</li>
+                    <li>Spring Boot framework</li>
+                    <li>RESTful API development</li>
+                    <li>Testing with JUnit/TestNG</li>
+                </ul>
+            </div>
+            <div class="course-footer">
+                <span class="duration">⏱ 8-10 Weeks</span>
+                <a href="/Contact" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+        <!-- Corporate Training -->
+        <div class="course-card">
+            <div class="course-header">
+                <div class="icon">🏢</div>
+                <h3>Corporate Training</h3>
+                <p>Customized Programs</p>
+            </div>
+            <div class="course-body">
+                <h4>What We Offer:</h4>
+                <ul>
+                    <li>Tailored training programs</li>
+                    <li>Team upskilling workshops</li>
+                    <li>On-site or remote delivery</li>
+                    <li>Certification preparation</li>
+                    <li>Flexible scheduling</li>
+                    <li>Post-training support</li>
+                </ul>
+            </div>
+            <div class="course-footer">
+                <span class="duration">⏱ Flexible</span>
+                <a href="/Contact" class="enroll-btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>

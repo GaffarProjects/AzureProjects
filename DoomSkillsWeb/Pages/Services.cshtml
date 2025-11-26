@@ -1,0 +1,146 @@
+@page
+@model ServicesModel
+@{
+    ViewData["Title"] = "Services";
+}
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
+    .page-header {
+        text-align: center;
+        color: white;
+        margin-bottom: 3rem;
+    }
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    .service-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transition: transform 0.3s;
+    }
+    .service-card:hover {
+        transform: translateY(-10px);
+    }
+    .service-card .icon {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+    .service-card h3 {
+        color: #667eea;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    .service-card p {
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+    .service-card ul {
+        list-style: none;
+        padding: 0;
+    }
+    .service-card ul li {
+        padding: 0.5rem 0;
+        color: #555;
+    }
+    .service-card ul li:before {
+        content: "✓ ";
+        color: #667eea;
+        font-weight: bold;
+        margin-right: 0.5rem;
+    }
+</style>
+
+<div class="container">
+    <div class="page-header">
+        <h1>💼 Our Services</h1>
+        <p style="font-size: 1.3rem;">Professional consulting and freelancing solutions</p>
+    </div>
+
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="icon">🏗️</div>
+            <h3>Cloud Architecture Design</h3>
+            <p>End-to-end cloud solution design and implementation for your business needs.</p>
+            <ul>
+                <li>Azure/AWS architecture design</li>
+                <li>Migration strategies</li>
+                <li>Cost optimization</li>
+                <li>Security & compliance</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">🔄</div>
+            <h3>DevOps Consulting</h3>
+            <p>Streamline your delivery pipeline with modern DevOps practices and tools.</p>
+            <ul>
+                <li>CI/CD pipeline setup</li>
+                <li>Infrastructure as Code</li>
+                <li>Automation frameworks</li>
+                <li>Monitoring solutions</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">🧪</div>
+            <h3>Test Automation Services</h3>
+            <p>Build robust, scalable test automation frameworks from the ground up.</p>
+            <ul>
+                <li>Framework architecture</li>
+                <li>Test script development</li>
+                <li>CI/CD integration</li>
+                <li>Team training</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">👨‍🏫</div>
+            <h3>Technical Mentorship</h3>
+            <p>One-on-one guidance to accelerate your cloud and DevOps career journey.</p>
+            <ul>
+                <li>Career roadmap planning</li>
+                <li>Certification guidance</li>
+                <li>Project reviews</li>
+                <li>Interview preparation</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">📊</div>
+            <h3>Project-Based Work</h3>
+            <p>Freelance services for your cloud, automation, and DevOps projects.</p>
+            <ul>
+                <li>Short-term contracts</li>
+                <li>Flexible engagement</li>
+                <li>Remote collaboration</li>
+                <li>Quality delivery</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">🔍</div>
+            <h3>Code & Architecture Review</h3>
+            <p>Expert review of your cloud infrastructure and automation code.</p>
+            <ul>
+                <li>Best practices audit</li>
+                <li>Security assessment</li>
+                <li>Performance optimization</li>
+                <li>Detailed recommendations</li>
+            </ul>
+        </div>
+    </div>
+</div>
