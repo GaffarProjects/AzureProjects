@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: doomskillsweb
+  labels:
+    app: doomskillsweb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: doomskillsweb
+  template:
+    metadata:
+      labels:
+        app: doomskillsweb
+    spec:
+      containers:
+      - name: doomskillsweb
+        image: <your-image-path> # e.g., yourdockerhubusername/doomskillsweb:latest
+        ports:
+        - containerPort: 80
