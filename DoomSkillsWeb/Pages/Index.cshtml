@@ -25,10 +25,15 @@
         margin-bottom: 2rem;
         opacity: 0.95;
     }
-    .hero .cta-button {
+    .hero .cta-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+    .cta-button {
         display: inline-block;
-        background: #FFD700;
-        color: #333;
         padding: 1rem 2.5rem;
         font-size: 1.2rem;
         font-weight: bold;
@@ -37,7 +42,16 @@
         box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         transition: transform 0.3s, box-shadow 0.3s;
     }
-    .hero .cta-button:hover {
+    .cta-primary {
+        background: #FFD700;
+        color: #333;
+    }
+    .cta-secondary {
+        background: rgba(255,255,255,0.2);
+        color: white;
+        border: 2px solid white;
+    }
+    .cta-button:hover {
         transform: translateY(-3px);
         box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
@@ -85,42 +99,86 @@
         font-size: 1.2rem;
         opacity: 0.9;
     }
+    .hiring-banner {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+        padding: 3rem;
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 3rem;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+    .hiring-banner h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .hiring-banner p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+    .hiring-banner .cta-button {
+        background: white;
+        color: #f5576c;
+    }
 </style>
 
 <div class="container">
     <div class="hero">
-        <h1>🚀 Welcome to DoomSkills</h1>
-        <p class="tagline">Elevate Your Career with Expert-Led Training in Cloud, DevOps & Automation</p>
-        <a href="/Courses" class="cta-button">Explore Courses</a>
+        <h1>🚀 Welcome to BoonSkills</h1>
+        <p class="tagline">Transform Your Career with Expert-Led Training in Cloud, DevOps, Automation & More</p>
+        <div class="cta-buttons">
+            <a href="/Courses" class="cta-button cta-primary">Explore Courses</a>
+            <a href="/Services" class="cta-button cta-secondary">Consulting Services</a>
+        </div>
     </div>
 
     <div class="features">
         <div class="feature-card">
             <div class="icon">☁️</div>
-            <h3>Cloud Training</h3>
-            <p>Master Azure, AWS, and cloud architecture with hands-on labs and real-world projects.</p>
+            <h3>Azure & AWS Cloud</h3>
+            <p>Master multi-cloud architectures with hands-on labs and certifications.</p>
         </div>
         <div class="feature-card">
             <div class="icon">⚙️</div>
-            <h3>DevOps Mastery</h3>
-            <p>Learn CI/CD, Infrastructure as Code, and modern deployment strategies.</p>
+            <h3>DevOps & CI/CD</h3>
+            <p>Learn modern deployment strategies and automation pipelines.</p>
         </div>
         <div class="feature-card">
             <div class="icon">🤖</div>
             <h3>Test Automation</h3>
-            <p>Build robust automation frameworks with Selenium, Playwright, and more.</p>
+            <p>Build enterprise-grade frameworks with Selenium, Playwright & more.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🐍</div>
+            <h3>Python & Java</h3>
+            <p>Core to advanced programming for automation and development.</p>
         </div>
         <div class="feature-card">
             <div class="icon">🔧</div>
-            <h3>ServiceNow</h3>
-            <p>ITSM, workflow automation, and enterprise service management expertise.</p>
+            <h3>ServiceNow & ITSM</h3>
+            <p>Enterprise service management and workflow automation.</p>
         </div>
+        <div class="feature-card">
+            <div class="icon">🎯</div>
+            <h3>Agile & Project Mgmt</h3>
+            <p>Scrum, Kanban, and modern project delivery methodologies.</p>
+        </div>
+    </div>
+
+    <div class="hiring-banner">
+        <h2>🎓 We're Hiring Trainers!</h2>
+        <p>Are you an expert in Cloud, DevOps, Automation, or other IT domains?<br>Join our team and empower the next generation of tech professionals.</p>
+        <a href="/Contact?inquiry=trainer" class="cta-button">Apply as Trainer</a>
     </div>
 
     <div class="stats">
         <div class="stat-box">
             <h2>20+</h2>
             <p>Years Experience</p>
+        </div>
+        <div class="stat-box">
+            <h2>10+</h2>
+            <p>Technologies Covered</p>
         </div>
         <div class="stat-box">
             <h2>100%</h2>

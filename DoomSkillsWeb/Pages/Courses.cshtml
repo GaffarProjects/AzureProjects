@@ -6,7 +6,7 @@
 
 <style>
     .container {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
         padding: 3rem 2rem;
     }
@@ -18,6 +18,18 @@
     .page-header h1 {
         font-size: 3rem;
         margin-bottom: 1rem;
+    }
+    .category-section {
+        margin-bottom: 4rem;
+    }
+    .category-header {
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: rgba(255,255,255,0.1);
+        border-radius: 10px;
+        text-align: center;
     }
     .courses-grid {
         display: grid;
@@ -40,6 +52,12 @@
         padding: 2rem;
         text-align: center;
     }
+    .course-header.ai-ml {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    .course-header.data {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
     .course-header .icon {
         font-size: 3rem;
         margin-bottom: 1rem;
@@ -47,6 +65,14 @@
     .course-header h3 {
         font-size: 1.8rem;
         margin-bottom: 0.5rem;
+    }
+    .course-header .badge {
+        display: inline-block;
+        background: rgba(255,255,255,0.3);
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
     }
     .course-body {
         padding: 2rem;
@@ -63,6 +89,7 @@
         padding: 0.5rem 0;
         color: #555;
         border-bottom: 1px solid #eee;
+        font-size: 0.95rem;
     }
     .course-body ul li:before {
         content: "✓ ";
@@ -98,152 +125,584 @@
 <div class="container">
     <div class="page-header">
         <h1>🎓 Our Training Courses</h1>
-        <p style="font-size: 1.3rem;">Industry-leading programs designed for career growth</p>
+        <p style="font-size: 1.3rem;">Master the latest in-demand technologies with expert-led training</p>
     </div>
 
-    <div class="courses-grid">
-        <!-- Azure Cloud Course -->
-        <div class="course-card">
-            <div class="course-header">
-                <div class="icon">☁️</div>
-                <h3>Azure Cloud Architecture</h3>
-                <p>Master Cloud Computing</p>
+    <!-- CLOUD TECHNOLOGIES -->
+    <div class="category-section">
+        <h2 class="category-header">☁️ Cloud Computing & Architecture</h2>
+        <div class="courses-grid">
+            
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">☁️</div>
+                    <h3>Microsoft Azure Cloud</h3>
+                    <p>Enterprise Cloud Solutions</p>
+                    <span class="badge">🔥 HOT</span>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Azure fundamentals & architecture</li>
+                        <li>Virtual networks, VPN, ExpressRoute</li>
+                        <li>App Services, Functions, Containers</li>
+                        <li>Azure DevOps & CI/CD pipelines</li>
+                        <li>Bicep, ARM Templates, Terraform</li>
+                        <li>Security, Identity, Governance</li>
+                        <li>AZ-104, AZ-305 certification prep</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 8-10 Weeks</span>
+                    <a href="/Contact?course=azure" class="enroll-btn">Enroll Now</a>
+                </div>
             </div>
-            <div class="course-body">
-                <h4>What You'll Learn:</h4>
-                <ul>
-                    <li>Azure fundamentals & core services</li>
-                    <li>Virtual networks & security</li>
-                    <li>Azure App Services & Functions</li>
-                    <li>Infrastructure as Code (Bicep, ARM)</li>
-                    <li>Cost optimization strategies</li>
-                    <li>AZ-104 & AZ-305 exam prep</li>
-                </ul>
-            </div>
-            <div class="course-footer">
-                <span class="duration">⏱ 8-10 Weeks</span>
-                <a href="/Contact" class="enroll-btn">Enroll Now</a>
-            </div>
-        </div>
 
-        <!-- Test Automation Course -->
-        <div class="course-card">
-            <div class="course-header">
-                <div class="icon">🤖</div>
-                <h3>Test Automation Mastery</h3>
-                <p>Build Robust Frameworks</p>
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">🌩️</div>
+                    <h3>AWS Cloud Solutions</h3>
+                    <p>Amazon Web Services</p>
+                    <span class="badge">🔥 HIGH DEMAND</span>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>EC2, S3, RDS, Lambda services</li>
+                        <li>VPC, subnets, security groups</li>
+                        <li>ECS, EKS container orchestration</li>
+                        <li>CloudFormation & Terraform IaC</li>
+                        <li>IAM, KMS, security best practices</li>
+                        <li>Cost optimization & monitoring</li>
+                        <li>AWS Solutions Architect cert prep</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 8-10 Weeks</span>
+                    <a href="/Contact?course=aws" class="enroll-btn">Enroll Now</a>
+                </div>
             </div>
-            <div class="course-body">
-                <h4>What You'll Learn:</h4>
-                <ul>
-                    <li>Selenium WebDriver advanced</li>
-                    <li>Playwright modern automation</li>
-                    <li>Cucumber BDD framework</li>
-                    <li>TestNG & JUnit integration</li>
-                    <li>Page Object Model design</li>
-                    <li>CI/CD integration with Jenkins</li>
-                </ul>
-            </div>
-            <div class="course-footer">
-                <span class="duration">⏱ 6-8 Weeks</span>
-                <a href="/Contact" class="enroll-btn">Enroll Now</a>
-            </div>
-        </div>
 
-        <!-- DevOps Course -->
-        <div class="course-card">
-            <div class="course-header">
-                <div class="icon">⚙️</div>
-                <h3>DevOps Engineering</h3>
-                <p>Automate Everything</p>
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">🔀</div>
+                    <h3>Multi-Cloud Architecture</h3>
+                    <p>Azure + AWS + GCP</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Multi-cloud strategy & design</li>
+                        <li>Cross-cloud networking</li>
+                        <li>Unified monitoring & logging</li>
+                        <li>Disaster recovery across clouds</li>
+                        <li>Cost comparison & optimization</li>
+                        <li>Hybrid cloud solutions</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 6-8 Weeks</span>
+                    <a href="/Contact?course=multicloud" class="enroll-btn">Enroll Now</a>
+                </div>
             </div>
-            <div class="course-body">
-                <h4>What You'll Learn:</h4>
-                <ul>
-                    <li>CI/CD pipeline design</li>
-                    <li>GitHub Actions & Jenkins</li>
-                    <li>Docker containerization</li>
-                    <li>Kubernetes orchestration</li>
-                    <li>Infrastructure as Code</li>
-                    <li>Monitoring & logging</li>
-                </ul>
-            </div>
-            <div class="course-footer">
-                <span class="duration">⏱ 10-12 Weeks</span>
-                <a href="/Contact" class="enroll-btn">Enroll Now</a>
-            </div>
-        </div>
 
-        <!-- ServiceNow Course -->
-        <div class="course-card">
-            <div class="course-header">
-                <div class="icon">🔧</div>
-                <h3>ServiceNow Administration</h3>
-                <p>IT Service Management</p>
-            </div>
-            <div class="course-body">
-                <h4>What You'll Learn:</h4>
-                <ul>
-                    <li>ServiceNow platform overview</li>
-                    <li>ITSM module configuration</li>
-                    <li>Workflow automation</li>
-                    <li>Integration Hub</li>
-                    <li>Custom applications</li>
-                    <li>Best practices & governance</li>
-                </ul>
-            </div>
-            <div class="course-footer">
-                <span class="duration">⏱ 6-8 Weeks</span>
-                <a href="/Contact" class="enroll-btn">Enroll Now</a>
-            </div>
-        </div>
-
-        <!-- Java Programming -->
-        <div class="course-card">
-            <div class="course-header">
-                <div class="icon">☕</div>
-                <h3>Java Programming</h3>
-                <p>Core to Advanced</p>
-            </div>
-            <div class="course-body">
-                <h4>What You'll Learn:</h4>
-                <ul>
-                    <li>Java fundamentals & OOP</li>
-                    <li>Collections & Streams</li>
-                    <li>Multithreading & concurrency</li>
-                    <li>Spring Boot framework</li>
-                    <li>RESTful API development</li>
-                    <li>Testing with JUnit/TestNG</li>
-                </ul>
-            </div>
-            <div class="course-footer">
-                <span class="duration">⏱ 8-10 Weeks</span>
-                <a href="/Contact" class="enroll-btn">Enroll Now</a>
-            </div>
-        </div>
-
-        <!-- Corporate Training -->
-        <div class="course-card">
-            <div class="course-header">
-                <div class="icon">🏢</div>
-                <h3>Corporate Training</h3>
-                <p>Customized Programs</p>
-            </div>
-            <div class="course-body">
-                <h4>What We Offer:</h4>
-                <ul>
-                    <li>Tailored training programs</li>
-                    <li>Team upskilling workshops</li>
-                    <li>On-site or remote delivery</li>
-                    <li>Certification preparation</li>
-                    <li>Flexible scheduling</li>
-                    <li>Post-training support</li>
-                </ul>
-            </div>
-            <div class="course-footer">
-                <span class="duration">⏱ Flexible</span>
-                <a href="/Contact" class="enroll-btn">Contact Us</a>
-            </div>
         </div>
     </div>
-</div>
+
+    <!-- AI & ML -->
+    <div class="category-section">
+        <h2 class="category-header">🤖 AI, Machine Learning & GenAI</h2>
+        <div class="courses-grid">
+            
+            <div class="course-card">
+                <div class="course-header ai-ml">
+                    <div class="icon">🧠</div>
+                    <h3>Generative AI & LLMs</h3>
+                    <p>ChatGPT, GPT-4, Claude</p>
+                    <span class="badge">🚀 TRENDING</span>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Prompt engineering mastery</li>
+                        <li>OpenAI API integration</li>
+                        <li>Building AI-powered apps</li>
+                        <li>LangChain & vector databases</li>
+                        <li>RAG (Retrieval Augmented Generation)</li>
+                        <li>Fine-tuning & model customization</li>
+                        <li>AI ethics & responsible AI</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 6-8 Weeks</span>
+                    <a href="/Contact?course=genai" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header ai-ml">
+                    <div class="icon">📊</div>
+                    <h3>Machine Learning & AI</h3>
+                    <p>Python, TensorFlow, PyTorch</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>ML algorithms & fundamentals</li>
+                        <li>Scikit-learn, TensorFlow, Keras</li>
+                        <li>Deep learning & neural networks</li>
+                        <li>Computer vision & NLP</li>
+                        <li>Model training & optimization</li>
+                        <li>MLOps & model deployment</li>
+                        <li>Azure ML & AWS SageMaker</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 10-12 Weeks</span>
+                    <a href="/Contact?course=ml" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header ai-ml">
+                    <div class="icon">💬</div>
+                    <h3>AI Chatbot Development</h3>
+                    <p>Build Intelligent Bots</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Conversational AI design</li>
+                        <li>Azure Bot Service & Dialogflow</li>
+                        <li>NLP & intent recognition</li>
+                        <li>Integration with APIs</li>
+                        <li>Multi-channel deployment</li>
+                        <li>Analytics & optimization</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 4-6 Weeks</span>
+                    <a href="/Contact?course=chatbot" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- DEVOPS & AUTOMATION -->
+    <div class="category-section">
+        <h2 class="category-header">⚙️ DevOps & Automation</h2>
+        <div class="courses-grid">
+            
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">⚙️</div>
+                    <h3>DevOps Engineering</h3>
+                    <p>Complete DevOps Lifecycle</p>
+                    <span class="badge">🔥 HIGH DEMAND</span>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>CI/CD pipeline design & implementation</li>
+                        <li>GitHub Actions, Jenkins, Azure DevOps</li>
+                        <li>Docker & Kubernetes (K8s)</li>
+                        <li>Infrastructure as Code (Terraform)</li>
+                        <li>Monitoring (Prometheus, Grafana)</li>
+                        <li>GitOps & ArgoCD</li>
+                        <li>Security & compliance (DevSecOps)</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 10-12 Weeks</span>
+                    <a href="/Contact?course=devops" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">🐳</div>
+                    <h3>Docker & Kubernetes</h3>
+                    <p>Container Orchestration</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Docker fundamentals & best practices</li>
+                        <li>Container image optimization</li>
+                        <li>Kubernetes architecture & components</li>
+                        <li>Pods, Services, Deployments</li>
+                        <li>Helm charts & package management</li>
+                        <li>Service mesh (Istio)</li>
+                        <li>CKA/CKAD certification prep</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 8-10 Weeks</span>
+                    <a href="/Contact?course=kubernetes" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">🔧</div>
+                    <h3>Infrastructure as Code</h3>
+                    <p>Terraform, Ansible, Bicep</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Terraform fundamentals & modules</li>
+                        <li>Azure Bicep & ARM templates</li>
+                        <li>Ansible configuration management</li>
+                        <li>CloudFormation for AWS</li>
+                        <li>State management & remote backends</li>
+                        <li>CI/CD integration for IaC</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 6-8 Weeks</span>
+                <div class="course-footer">
+                    <span class="duration">⏱ 6-8 Weeks</span>
+                    <a href="/Contact?course=iac" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TEST AUTOMATION & QA -->
+    <div class="category-section">
+        <h2 class="category-header">🤖 Test Automation & Quality Engineering</h2>
+        <div class="courses-grid">
+            
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">🤖</div>
+                    <h3>Selenium Automation</h3>
+                    <p>Web Test Automation</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Selenium WebDriver advanced techniques</li>
+                        <li>Page Object Model (POM) design</li>
+                        <li>TestNG & JUnit frameworks</li>
+                        <li>Data-driven & keyword-driven testing</li>
+                        <li>Selenium Grid for parallel execution</li>
+                        <li>Integration with CI/CD pipelines</li>
+                        <li>Reporting with Allure & ExtentReports</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 6-8 Weeks</span>
+                    <a href="/Contact?course=selenium" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">🎭</div>
+                    <h3>Playwright & Cypress</h3>
+                    <p>Modern Web Testing</p>
+                    <span class="badge">🚀 TRENDING</span>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Playwright for cross-browser testing</li>
+                        <li>Cypress for modern web apps</li>
+                        <li>API testing & mocking</li>
+                        <li>Visual regression testing</li>
+                        <li>Component testing</li>
+                        <li>Performance & accessibility testing</li>
+                        <li>TypeScript for test automation</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 6-8 Weeks</span>
+                    <a href="/Contact?course=playwright" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">🥒</div>
+                    <h3>BDD with Cucumber</h3>
+                    <p>Behavior-Driven Development</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Gherkin language & feature files</li>
+                        <li>Step definitions & hooks</li>
+                        <li>Cucumber with Java & JavaScript</li>
+                        <li>Scenario outlines & data tables</li>
+                        <li>Integration with Selenium/Playwright</li>
+                        <li>Reporting & CI/CD integration</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 4-6 Weeks</span>
+                    <a href="/Contact?course=cucumber" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">📱</div>
+                    <h3>Mobile Test Automation</h3>
+                    <p>Appium & Mobile Testing</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Appium setup & architecture</li>
+                        <li>Android & iOS automation</li>
+                        <li>Native, hybrid, web apps testing</li>
+                        <li>Mobile gestures & interactions</li>
+                        <li>Device farms & cloud testing</li>
+                        <li>Performance testing for mobile</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 6-8 Weeks</span>
+                    <a href="/Contact?course=mobile" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">🔌</div>
+                    <h3>API Testing & Automation</h3>
+                    <p>REST, GraphQL, Postman</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>REST API fundamentals & testing</li>
+                        <li>Postman advanced automation</li>
+                        <li>RestAssured with Java</li>
+                        <li>GraphQL API testing</li>
+                        <li>Authentication & security testing</li>
+                        <li>Performance testing with JMeter</li>
+                        <li>Contract testing with Pact</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 4-6 Weeks</span>
+                    <a href="/Contact?course=api" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PROGRAMMING & DEVELOPMENT -->
+    <div class="category-section">
+        <h2 class="category-header">💻 Programming & Development</h2>
+        <div class="courses-grid">
+            
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">🐍</div>
+                    <h3>Python Programming</h3>
+                    <p>Beginner to Advanced</p>
+                    <span class="badge">🔥 POPULAR</span>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Python fundamentals & OOP</li>
+                        <li>Data structures & algorithms</li>
+                        <li>File handling & databases</li>
+                        <li>Web scraping & automation</li>
+                        <li>Flask/Django web frameworks</li>
+                        <li>Data analysis with Pandas</li>
+                        <li>Automation scripting</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 8-10 Weeks</span>
+                    <a href="/Contact?course=python" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">☕</div>
+                    <h3>Java Programming</h3>
+                    <p>Core to Advanced Java</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Java fundamentals & OOP concepts</li>
+                        <li>Collections, Streams, Lambda</li>
+                        <li>Multithreading & concurrency</li>
+                        <li>JDBC & database connectivity</li>
+                        <li>Spring Boot framework</li>
+                        <li>RESTful API development</li>
+                        <li>Microservices architecture</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 10-12 Weeks</span>
+                    <a href="/Contact?course=java" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">⚛️</div>
+                    <h3>Full Stack Development</h3>
+                    <p>React, Node.js, MongoDB</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>HTML, CSS, JavaScript (ES6+)</li>
+                        <li>React.js & modern frontend</li>
+                        <li>Node.js & Express backend</li>
+                        <li>MongoDB & database design</li>
+                        <li>REST API development</li>
+                        <li>Authentication & security</li>
+                        <li>Deployment to cloud platforms</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 12-16 Weeks</span>
+                    <a href="/Contact?course=fullstack" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">🔷</div>
+                    <h3>.NET Core Development</h3>
+                    <p>C#, ASP.NET Core, Azure</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>C# language fundamentals</li>
+                        <li>ASP.NET Core MVC & Web API</li>
+                        <li>Entity Framework Core</li>
+                        <li>Blazor for web apps</li>
+                        <li>Microservices with .NET</li>
+                        <li>Azure integration & deployment</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 10-12 Weeks</span>
+                    <a href="/Contact?course=dotnet" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- DATA & ANALYTICS -->
+    <div class="category-section">
+        <h2 class="category-header">📊 Data Engineering & Analytics</h2>
+        <div class="courses-grid">
+            
+            <div class="course-card">
+                <div class="course-header data">
+                    <div class="icon">📊</div>
+                    <h3>Data Engineering</h3>
+                    <p>ETL, Pipelines, Big Data</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>ETL/ELT pipeline design</li>
+                        <li>SQL & database optimization</li>
+                        <li>Apache Spark & Hadoop</li>
+                        <li>Azure Data Factory, Databricks</li>
+                        <li>AWS Glue, Redshift, Athena</li>
+                        <li>Data warehousing concepts</li>
+                        <li>Real-time streaming (Kafka)</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 10-12 Weeks</span>
+                    <a href="/Contact?course=dataeng" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header data">
+                    <div class="icon">📈</div>
+                    <h3>Power BI & Tableau</h3>
+                    <p>Business Intelligence</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Power BI Desktop & Service</li>
+                        <li>DAX formulas & calculations</li>
+                        <li>Data modeling & relationships</li>
+                        <li>Interactive dashboards</li>
+                        <li>Tableau visualizations</li>
+                        <li>Data storytelling techniques</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 6-8 Weeks</span>
+                    <a href="/Contact?course=powerbi" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ENTERPRISE TOOLS -->
+    <div class="category-section">
+        <h2 class="category-header">🔧 Enterprise Tools & ITSM</h2>
+        <div class="courses-grid">
+            
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">🔧</div>
+                    <h3>ServiceNow</h3>
+                    <p>ITSM & Workflow Automation</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>ServiceNow platform overview</li>
+                        <li>ITSM module configuration</li>
+                        <li>Incident, Problem, Change mgmt</li>
+                        <li>Workflow & Flow Designer</li>
+                        <li>Integration Hub & APIs</li>
+                        <li>Custom application development</li>
+                        <li>CSA/CIS certification prep</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 6-8 Weeks</span>
+                    <a href="/Contact?course=servicenow" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="icon">📋</div>
+                    <h3>Jira & Confluence</h3>
+                    <p>Agile Project Management</p>
+                </div>
+                <div class="course-body">
+                    <h4>What You'll Learn:</h4>
+                    <ul>
+                        <li>Jira project setup & workflows</li>
+                        <li>Scrum & Kanban boards</li>
+                        <li>Sprint planning & tracking</li>
+                        <li>Confluence documentation</li>
+                        <li>Advanced JQL queries</li>
+                        <li>Automation rules & integrations</li>
+                    </ul>
+                </div>
+                <div class="course-footer">
+                    <span class="duration">⏱ 3-4 Weeks</span>
+                    <a href="/Contact?course=jira" class="enroll-btn">Enroll Now</a>
