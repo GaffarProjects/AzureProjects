@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: doomskills
+
+resources:
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
+
+commonLabels:
+  app: doomskillsweb
+  managed-by: argocd
+
+images:
+  - name: doomskillsweb
+    newName: doomskillsweb
+    newTag: latest
