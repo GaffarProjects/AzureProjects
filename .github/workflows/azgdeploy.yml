@@ -19,7 +19,9 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Build with dotnet
-        run: dotnet build DoomSkillsWeb/DoomSkillsWeb.csproj --configuration Release
+        run: |
+             cd DoomSkillsWeb
+             dotnet build DoomSkillsWeb/DoomSkillsWeb.csproj --configuration Release
 
       - name: Publish with dotnet
         run: dotnet publish DoomSkillsWeb/DoomSkillsWeb.csproj -c Release -o ./publish
