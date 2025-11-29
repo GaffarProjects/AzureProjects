@@ -23,7 +23,7 @@ spec:
       containers:
         - name: doomskillsweb
           image: doomskillsweb:latest
-          imagePullPolicy: Always
+          imagePullPolicy: Never
           ports:
             - containerPort: 5000
               name: http
