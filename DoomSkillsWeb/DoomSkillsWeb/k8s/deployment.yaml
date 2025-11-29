@@ -14,8 +14,11 @@ spec:
       labels:
         app: doomskillsweb
     spec:
-      containers:
-      - name: doomskillsweb
-        image: <your-image-path> # e.g., yourdockerhubusername/doomskillsweb:latest
-        ports:
-        - containerPort: 80
+  containers:
+  - name: doomskillsweb
+    image: azcontregdemog.azurecr.io/doomskillsweb:latest
+    imagePullPolicy: IfNotPresent
+    ports:
+    - containerPort: 80
+  imagePullSecrets:
+  - name: acr-secret
