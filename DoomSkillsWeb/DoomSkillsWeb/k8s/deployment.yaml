@@ -19,6 +19,9 @@ spec:
     image: azcontregdemog.azurecr.io/doomskillsweb:latest
     imagePullPolicy: IfNotPresent
     ports:
-    - containerPort: 80
+    - containerPort: 5000
+    name: DOTNET_USE_POLLING_FILE_WATCHER
+    value: "true"
   imagePullSecrets:
   - name: acr-secret
+  
